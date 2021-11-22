@@ -106,6 +106,269 @@
         </div>
       </div>
     </div>
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------SEZIONE NEW ARRIVALS -->
+    <div class="na_section">
+      <SectionTitle
+        class="my_cont"
+        title="New Arrivals"
+        subtitle="Must have products from our top sellers"
+      ></SectionTitle>
+
+      <div class="container_na">
+        <div class="na_card">
+          <img src="../assets/spring_printed_dress.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------BANNER RECENSIONE -->
+    <div class="banner_testimonial">
+      <div class="my_cont">
+        <div class="testimonial_cont">
+          <img src="../assets/man_testimonial.png" alt="" />
+          <p class="p-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
+            excepturi veniam quo quod, adipisci necessitatibus commodi, animi
+            perferendis maxime aliquam architecto. Mollitia ratione cupiditate
+            rem, quidem tempore sint consequuntur labore?
+          </p>
+          <span><strong>Dario Pineda</strong>, Theme Fusion</span>
+          <div>1/2</div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------SEZIONE FROM OUR BLOG -->
+    <div class="from_blog_section">
+      <div class="my_cont">
+        <SectionTitle
+          title="From Our Blog"
+          subtitle="Must have products from our top sellers"
+        ></SectionTitle>
+        <div class="container_from_blog">
+          <div class="from_blog_card">
+            <img src="../assets/post_img_12-200x125.jpg" alt="" />
+            <div>
+              <p>quae facere asperiores nostrum aut</p>
+              <small>September 9th, 2015 | 0 Comments</small>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------- -->
+    <hr />
+    <!-- ---------------------------------------------------------SEZIONE PREVIEW ITEMS -->
+    <div class="preview_items">
+      <div class="my_cont">
+        <div class="row">
+          <div class="col-3">
+            <p>FEATURED</p>
+            <ul>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <p>ON SALE</p>
+            <ul>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <p>TOP RATED</p>
+            <ul>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <p>LATEST REVIEWS</p>
+            <ul>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="item_details">
+                  <small>Black Jacket</small>
+                  <span class="fw-bold">$125</span>
+                </div>
+                <div class="item_image">
+                  <img
+                    src="../assets/black_leather_jacket.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------SEZIONE LOGHI BRAND -->
+    <div class="logo_section">
+      <div class="my_cont">
+        <p>BRAND LOGOS</p>
+        <div class="logos_container">
+          <div class="logo">
+            <img src="../assets/b_logotype_6.png" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/b_logotype_7.png" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/b_logotype_1.png" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/b_logotype_2.png" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/b_logotype_3.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -187,16 +450,97 @@ export default {
   }
 }
 .banner_offer {
-  height: 500px; //TEMPORANEO
+  display: flex;
+  padding: 70px 0px;
   background-image: url("../assets/bkgd_confetti-compressor.jpg");
   background-position: center;
-  .offer_card_1 {
-    // --------------->   DA SISTEMARE!!!
-    background-image: url("../assets/promo_box_1_bg.jpg");
+
+  .offer_cont {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    width: 1140px;
+    .offer_card_1 {
+      width: 45%;
+      // --------------->   DA SISTEMARE!!!
+      background-image: url("../assets/promo_box_1_bg.jpg");
+    }
+    .offer_card_2 {
+      width: 45%;
+
+      // --------------->   DA SISTEMARE!!!
+      background-image: url("../assets/promo_box_2_bg.jpg");
+    }
   }
-  .offer_card_2 {
-    // --------------->   DA SISTEMARE!!!
-    background-image: url("../assets/promo_box_2_bg.jpg");
+}
+.na_section {
+  padding: 70px 0px;
+  .container_na {
+    .na_card {
+      width: calc(100% / 5);
+    }
+  }
+}
+.banner_testimonial {
+  background-image: url("../assets/testimonials_home_1_bg.jpg");
+  padding: 100px 0px;
+  color: white;
+
+  p {
+    padding: 20px 110px;
+    font-style: italic;
+  }
+}
+.from_blog_section {
+  padding: 70px 0px;
+  .container_from_blog {
+    .from_blog_card {
+      width: calc(100% / 3);
+      text-align: start;
+      img {
+        width: 100%;
+      }
+      div {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        p {
+          font-weight: bold;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+.preview_items {
+  padding: 70px 0px;
+  text-align: start;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 10px 0px;
+      display: flex;
+      border-bottom: 1px solid rgb(184, 184, 184);
+      .item_details {
+        width: 80%;
+      }
+      .item_image {
+        width: 20%;
+      }
+    }
+  }
+}
+.logo_section {
+  padding: 70px 0px;
+  background-color: #e7e7e7;
+  .logos_container {
+    display: flex;
+    .logo {
+      width: calc(100% / 5);
+    }
   }
 }
 </style>
