@@ -17,66 +17,36 @@
     <div class="footer_nav_section">
       <div class="menu_cont row">
         <div class="col-3 my_col">
+          <!-- COLONNA FOOTER INFO AVADA -->
           <img src="@/assets/classic_shop_logo_footer.png" width="70%" alt="" />
           <p>
-            asdfsdfasdfasdf asda,<br />
-            asdfsd asdsadfasd fasdf,<br />
-            asdfsdfa ssasdfasdf,<br />
-            asdfsdfasasd dfasdf,<br />
-            asdfsdfasd fasdf,<br />
+            12345 North Main Sreet,<br />
+            New York, NY 555555<br />
+            Phone: 1.800.5555.6789<br />
+            Email:info@company.com<br />
+            Web: Theme-fusion.com<br />
           </p>
-          <ul>
-            <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-            <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-            <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-            <li><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
-          </ul>
+          <SocialIcon></SocialIcon>
         </div>
         <PreviewItem title="TOP RATED PRODUCTS"></PreviewItem>
+        <!-- COLONNA FOOTER TOP PRODUCTS -->
         <div class="col-3 my_recent_post">
+          <!-- COLONNA FOOTER RECENT POSTS -->
           <p>RECENT POSTS</p>
           <ul>
-            <li>
+            <li v-for="(post, i) in recentPosts" :key="`post` + i">
               <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              <p class="ps-2">$asdasdasdasdasdasdasdasdasd</p>
-            </li>
-            <li>
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              <p class="ps-2">$asdasdasdasdasdasdasdasdasd</p>
-            </li>
-            <li>
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              <p class="ps-2">$asdasdasdasdasdasdasdasdasd</p>
-            </li>
-            <li>
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              <p class="ps-2">$asdasdasdasdasdasdasdasdasd</p>
-            </li>
-            <li>
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              <p class="ps-2">$asdasdasdasdasdasdasdasdasd</p>
-            </li>
-            <li>
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              <p class="ps-2">$asdasdasdasdasdasdasdasdasd</p>
+              <p class="ps-2">{{ post.post }}</p>
             </li>
           </ul>
         </div>
         <div class="col-3 my_tags">
+          <!-- COLONNA FOOTER TAG -->
           <p>TAGS</p>
           <ul class="tags_list">
-            <li class="d-inline"><a class="tag_link" href="#">Black</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">Blaasck</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">Bck</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">fgh</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">uukkk</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">Blaciaock</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">Bsddck</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">enter</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">san</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">fbgb</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">freee</a></li>
-            <li class="d-inline"><a class="tag_link" href="#">dfdf</a></li>
+            <li class="d-inline" v-for="(tag, i) in tags" :key="`tag` + i">
+              <a class="tag_link" :href="`/` + tag.name">{{ tag.name }}</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -98,10 +68,103 @@
 
 <script>
 import PreviewItem from "./PreviewItem.vue";
+import SocialIcon from "./SocialIcon.vue";
 export default {
-  components: { PreviewItem },
+  components: { PreviewItem, SocialIcon },
   name: "Footer",
   props: {},
+  data() {
+    return {
+      recentPosts: [
+        {
+          post: "at aptent vehicula blandit  ",
+        },
+        {
+          post: "aliquet purus dui elementum ",
+        },
+        {
+          post: "Leo duis parturient tempor ",
+        },
+        {
+          post: "class penatibus fames cursus ",
+        },
+        {
+          post: "sagittis ante primis dis",
+        },
+        {
+          post: "Id lacinia neque vulputate ",
+        },
+      ],
+      tags: [
+        {
+          name: "Black",
+        },
+        {
+          name: "boots",
+        },
+        {
+          name: "Brown",
+        },
+        {
+          name: "Casual",
+        },
+        {
+          name: "D&G",
+        },
+        {
+          name: "Fabric",
+        },
+        {
+          name: "flower",
+        },
+        {
+          name: "Grey",
+        },
+        {
+          name: "hat",
+        },
+        {
+          name: "Hipster",
+        },
+        {
+          name: "lines",
+        },
+        {
+          name: "multi-purpose",
+        },
+        {
+          name: "New-York",
+        },
+        {
+          name: "Outdoors",
+        },
+        {
+          name: "red",
+        },
+        {
+          name: "responsive",
+        },
+        {
+          name: "summer",
+        },
+        {
+          name: "sweater",
+        },
+        {
+          name: "Travel",
+        },
+        {
+          name: "Warm",
+        },
+        {
+          name: "white",
+        },
+        {
+          name: "winter",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -142,17 +205,6 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      ul {
-        list-style: none;
-        margin: 0%;
-        padding: 0;
-        li {
-          display: inline;
-          i {
-            padding-right: 20px;
-          }
-        }
-      }
     }
     .my_recent_post {
       text-align: start;

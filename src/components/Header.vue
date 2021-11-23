@@ -3,12 +3,7 @@
     <div class="first_nav">
       <div class="my_cont">
         <div class="d-flex justify-content-between align-items-center">
-          <ul>
-            <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-            <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-            <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-            <li><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
-          </ul>
+          <SocialIcon></SocialIcon>
           <ul class="cart_menu">
             <li>Shopping Cart</li>
             <li>
@@ -60,7 +55,9 @@
 </template>
 
 <script>
+import SocialIcon from "./SocialIcon.vue";
 export default {
+  components: { SocialIcon },
   name: "Header",
   props: {},
   data() {

@@ -75,17 +75,20 @@
     </div>
     <!-- ------------------------------------------------------------------------- -->
     <!-- ---------------------------------------BANNER OFFERTE SCONTO E FREE SHIPPING -->
+    <!-- FARE COMPONENTE CON PROPS !!!!!!!!!!!!!!!!! -->
     <div class="banner_offer">
       <div class="my_cont">
         <div class="offer_cont">
-          <div class="offer_card_1">
+          <div class="offer_card_1 text-white">
+            <img src="@/assets/promo_box_1_bg.jpg" width="100%" alt="" />
             <div class="offer_card_content">
               <h2>70% Off</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               <button>VIEW MORE</button>
             </div>
           </div>
-          <div class="offer_card_2">
+          <div class="offer_card_1 text-white">
+            <img src="@/assets/promo_box_1_bg.jpg" width="100%" alt="" />
             <div class="offer_card_content">
               <h2>70% Off</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -140,10 +143,14 @@
           subtitle="Must have products from our top sellers"
         ></SectionTitle>
         <div class="container_from_blog">
-          <div class="from_blog_card">
-            <img src="../assets/post_img_12-200x125.jpg" alt="" />
+          <div
+            class="from_blog_card"
+            v-for="(FbCard, i) in fromBlog"
+            :key="`BlogCard` + i"
+          >
+            <img :src="FbCard.thumb" alt="" />
             <div>
-              <p>quae facere asperiores nostrum aut</p>
+              <p>{{ FbCard.title }}</p>
               <small>September 9th, 2015 | 0 Comments</small>
             </div>
             <p>
@@ -270,6 +277,20 @@ export default {
           image: require("@/assets/modern_love_tee.jpg"),
         },
       ],
+      fromBlog: [
+        {
+          title: "Integer ac felis aliquet dignissim",
+          thumb: require("@/assets/post_img_12-700x441.jpg"),
+        },
+        {
+          title: "sagittis iaculis id justo",
+          thumb: require("@/assets/post_img_11-700x441.jpg"),
+        },
+        {
+          title: "Sollicitudin nulla facilisi nisl curae",
+          thumb: require("@/assets/post_img_10-700x441.jpg"),
+        },
+      ],
     };
   },
 };
@@ -327,8 +348,6 @@ export default {
       small {
         display: block;
       }
-      button {
-      }
     }
   }
 }
@@ -357,13 +376,21 @@ export default {
     width: 1140px;
     .offer_card_1 {
       width: 45%;
-      // --------------->   DA SISTEMARE!!!
-      background-image: url("../assets/promo_box_1_bg.jpg");
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .offer_card_content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: start;
+        padding-left: 50px;
+      }
     }
     .offer_card_2 {
       width: 45%;
-
-      // --------------->   DA SISTEMARE!!!
       background-image: url("../assets/promo_box_2_bg.jpg");
     }
   }
@@ -390,6 +417,7 @@ export default {
 .from_blog_section {
   padding: 70px 0px;
   .container_from_blog {
+    display: flex;
     .from_blog_card {
       width: calc(100% / 3);
       text-align: start;
