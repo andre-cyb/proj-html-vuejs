@@ -15,38 +15,23 @@
           </ul>
         </div>
         <div class="card_container">
-          <div class="featured_products_card">
-            <img src="@/assets/black_elegant_leather_jacket.jpg" alt="" />
-            <p>Black Leather Jacket</p>
-            <small>Men,Jackets,Jeans</small>
-            <span>222</span>
-            <span>121</span>
-          </div>
-          <div class="featured_products_card">
-            <img src="@/assets/black_elegant_leather_jacket.jpg" alt="" />
-            <p>Black Leather Jacket</p>
-            <small>Men,Jackets,Jeans</small>
-            <span>222</span>
-            <span>121</span>
-          </div>
-          <div class="featured_products_card">
-            <img src="@/assets/black_elegant_leather_jacket.jpg" alt="" />
-            <p>Black Leather Jacket</p>
-            <small>Men,Jackets,Jeans</small>
-            <span>222</span>
-            <span>121</span>
-          </div>
-          <div class="featured_products_card">
-            <img src="@/assets/black_elegant_leather_jacket.jpg" alt="" />
-            <p>Black Leather Jacket</p>
-            <small>Men,Jackets,Jeans</small>
-            <span>222</span>
-            <span>121</span>
+          <div
+            class="featured_products_card"
+            v-for="(product, i) in maleCollection"
+            :key="i"
+          >
+            <img :src="product.image" alt="" />
+            <p>{{ product.product }}</p>
+            <small>{{ product.tags }}</small>
+            <span :class="product.oldPrice ? `d-block` : `d-none`">
+              {{ product.oldPrice }}</span
+            >
+            <span>{{ product.price }}</span>
           </div>
         </div>
       </section>
-      <!-- ---------------------------------------------------FEATURED PRODUCT -->
-      <!--  -->
+      <!-- --------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------COLLECTION  -->
     </div>
     <div class="collection_section">
       <div class="collection_card">
@@ -78,8 +63,12 @@
           subtitle="Must have products from our top sellers"
         ></SectionTitle>
         <div class="container_bs">
-          <div class="bs_card">
-            <img src="../assets/spring_printed_dress.jpg" alt="" />
+          <div
+            class="bs_card"
+            v-for="(BsCard, i) in bestSeller"
+            :key="`BestS` + i"
+          >
+            <img :src="BsCard.image" alt="" />
           </div>
         </div>
       </div>
@@ -116,8 +105,12 @@
       ></SectionTitle>
 
       <div class="container_na">
-        <div class="na_card">
-          <img src="../assets/spring_printed_dress.jpg" alt="" />
+        <div
+          class="na_card"
+          v-for="(NaCard, i) in NewArrivals"
+          :key="`NastS` + i"
+        >
+          <img :src="NaCard.image" width="100%" alt="" />
         </div>
       </div>
     </div>
@@ -207,6 +200,78 @@ export default {
   components: { SectionTitle, PreviewItem },
   name: "Header",
   props: {},
+  data() {
+    return {
+      maleCollection: [
+        {
+          product: "Black Leather Jacket",
+          tags: "Men, Jackets, Jeans", //  ------------------------------- !!SE RIMANE TEMPO CREA UN ARRAY PER I TAG  //
+          price: "$121",
+          discount: true,
+          oldPrice: "$235",
+          image: require("@/assets/black_elegant_leather_jacket.jpg"),
+        },
+        {
+          product: "Black Leather Suit",
+          tags: "Men, Jackets", //  ------------------------------- !!SE RIMANE TEMPO CREA UN ARRAY PER I TAG  //
+          price: "$176",
+          discount: false,
+          oldPrice: "",
+          image: require("@/assets/black_leather_suit.jpg"),
+        },
+        {
+          product: "Blue Jacket & Stripe Tee",
+          tags: "Men, Jackets, Suits", //  ------------------------------- !!SE RIMANE TEMPO CREA UN ARRAY PER I TAG  //
+          price: "$580",
+          discount: false,
+          oldPrice: "",
+          image: require("@/assets/blue_jacket_and_white_stripe_tee.jpg"),
+        },
+        {
+          product: "Modern Black Leather suit",
+          tags: "Men, Jackets", //  ------------------------------- !!SE RIMANE TEMPO CREA UN ARRAY PER I TAG  //
+          price: "$96",
+          discount: false,
+          oldPrice: "",
+          image: require("@/assets/modern_black_leather_suit.jpg"),
+        },
+      ],
+      bestSeller: [
+        {
+          image: require("@/assets/spring_printed_dress.jpg"),
+        },
+        {
+          image: require("@/assets/modern_love_tee.jpg"),
+        },
+        {
+          image: require("@/assets/black_leather_jacket.jpg"),
+        },
+        {
+          image: require("@/assets/black_elegant_leather_jacket.jpg"),
+        },
+        {
+          image: require("@/assets/hipster_black_top.jpg"),
+        },
+      ],
+      NewArrivals: [
+        {
+          image: require("@/assets/black_elegant_leather_jacket.jpg"),
+        },
+        {
+          image: require("@/assets/hipster_black_top.jpg"),
+        },
+        {
+          image: require("@/assets/black_leather_suit.jpg"),
+        },
+        {
+          image: require("@/assets/spring_printed_dress.jpg"),
+        },
+        {
+          image: require("@/assets/modern_love_tee.jpg"),
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -270,6 +335,7 @@ export default {
 .bs_section {
   padding: 70px 0px;
   .container_bs {
+    display: flex;
     .bs_card {
       width: calc(100% / 5);
       img {
@@ -305,6 +371,7 @@ export default {
 .na_section {
   padding: 70px 0px;
   .container_na {
+    display: flex;
     .na_card {
       width: calc(100% / 5);
     }

@@ -11,8 +11,15 @@
           </ul>
           <ul class="cart_menu">
             <li>Shopping Cart</li>
-            <li>My Account</li>
-            <li class="cart">Cart</li>
+            <li>
+              My Account <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </li>
+            <li class="cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>CART<i
+                class="fa fa-chevron-down"
+                aria-hidden="true"
+              ></i>
+            </li>
           </ul>
         </div>
       </div>
@@ -23,12 +30,14 @@
           <img src="@/assets/classic_shop_logo1x.png" alt="" />
           <div>
             <ul class="cart_menu">
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li v-for="(menuLink, i) in NavbarHeader" :key="i">
+                {{ menuLink.title }}
+                <i
+                  v-if="!menuLink.subMenu ? `` : `d-none`"
+                  class="fa fa-chevron-down sub_menu_icon"
+                  aria-hidden="true"
+                ></i>
+              </li>
             </ul>
             <button>SHOP NOW!</button>
             <span><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -54,12 +63,42 @@
 export default {
   name: "Header",
   props: {},
+  data() {
+    return {
+      NavbarHeader: [
+        {
+          title: "Home",
+          subMenu: true,
+        },
+        {
+          title: "Shop",
+          subMenu: true,
+        },
+        {
+          title: "Products",
+          subMenu: true,
+        },
+        {
+          title: "Categories",
+          subMenu: true,
+        },
+        {
+          title: "News",
+          subMenu: false,
+        },
+        {
+          title: "Elements",
+          subMenu: true,
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss">
 .first_nav {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #f6f6f6;
   .my_cont {
     max-width: 1140px;
     margin: auto;
@@ -70,17 +109,34 @@ export default {
       li {
         display: inline-block;
         i {
-          padding: 10px;
+          font-size: 16px;
+          padding-right: 20px;
         }
       }
     }
     .cart_menu {
       li {
+        color: #6b6a6b;
         padding: 15px;
-        border-right: 1px solid grey;
+        border-right: 1px solid #f6f6f6;
+
+        i {
+          padding: 0px 10px;
+          font-size: 10px;
+        }
       }
       .cart {
+        color: black;
         padding: 15px 60px 15px 60px;
+        border: none;
+        background-color: #fafafa;
+        i {
+          font-size: 18px;
+          padding: 0px 10px;
+        }
+        .fa-chevron-down {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -98,16 +154,17 @@ export default {
     .cart_menu {
       display: inline-block;
       li {
-        padding: 20px;
+        padding: 15px;
         display: inline-block;
+        .sub_menu_icon {
+          font-size: 13px;
+          padding: 0px 5px;
+        }
       }
     }
   }
 }
 .hero {
-  /* background-image: url("../assets/home1_slide_three_bg_2.jpg");
-  background-position: center;
-  background-repeat: no-repeat; */
   .hero_to_center {
     position: absolute;
     top: 50%;
