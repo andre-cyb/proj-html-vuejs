@@ -166,182 +166,10 @@
     <div class="preview_items">
       <div class="my_cont">
         <div class="row">
-          <div class="col-3">
-            <p>FEATURED</p>
-            <ul>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-3">
-            <p>ON SALE</p>
-            <ul>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-3">
-            <p>TOP RATED</p>
-            <ul>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-3">
-            <p>LATEST REVIEWS</p>
-            <ul>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="item_details">
-                  <small>Black Jacket</small>
-                  <span class="fw-bold">$125</span>
-                </div>
-                <div class="item_image">
-                  <img
-                    src="../assets/black_leather_jacket.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
+          <PreviewItem title="FEATURED"></PreviewItem>
+          <PreviewItem title="FEATURED"></PreviewItem>
+          <PreviewItem title="FEATURED"></PreviewItem>
+          <PreviewItem title="FEATURED"></PreviewItem>
         </div>
       </div>
     </div>
@@ -373,9 +201,10 @@
 </template>
 
 <script>
+import PreviewItem from "./PreviewItem.vue";
 import SectionTitle from "./SectionTitle.vue";
 export default {
-  components: { SectionTitle },
+  components: { SectionTitle, PreviewItem },
   name: "Header",
   props: {},
 };

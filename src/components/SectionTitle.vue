@@ -1,10 +1,12 @@
 <template>
   <div class="title_section">
-    <hr />
-    <div class="title">
-      <h3>{{ title }}</h3>
+    <div class="d-flex">
+      <hr />
+      <div class="title">
+        <h3>{{ title }}</h3>
+      </div>
+      <hr />
     </div>
-    <hr />
     <p>{{ subtitle }}</p>
   </div>
 </template>
