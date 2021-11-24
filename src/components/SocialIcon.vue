@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="icon_list">
     <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
     <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
     <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
@@ -13,9 +13,9 @@ export default {
 };
 </script>
 <style lang="scss">
-ul {
+.icon_list {
   list-style: none;
-  margin: 0%;
+  margin: 0;
   padding: 0;
   li {
     display: inline;

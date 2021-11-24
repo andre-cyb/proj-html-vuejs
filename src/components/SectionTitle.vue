@@ -1,6 +1,6 @@
 <template>
   <div class="title_section">
-    <div class="d-flex">
+    <div class="d-flex align-items-center">
       <hr />
       <div class="title">
         <h3>{{ title }}</h3>
@@ -24,15 +24,16 @@ export default {
 
   .title {
     display: inline-block;
-    width: 22%;
+    width: 40%;
     h3 {
+      font-size: 35px;
       font-weight: 700;
     }
   }
   hr {
     display: inline-block;
     height: 2px;
-    width: 39%;
+    width: 30%;
     background-color: rgb(44, 44, 44);
     vertical-align: center;
   }

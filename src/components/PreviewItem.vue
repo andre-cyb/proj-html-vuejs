@@ -8,7 +8,7 @@
           <div v-if="product.vote !== 0">
             <i
               class="fa fa-star"
-              style="color: #427ed5"
+              style="color: $primary_color"
               aria-hidden="true"
               v-for="(star, i) in product.vote"
               :key="`star` + i"
@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/style/variables.scss";
 .my_preview {
   text-align: start;
   ul {
@@ -52,7 +53,7 @@ export default {
     li {
       padding: 10px 0px;
       display: flex;
-      border-bottom: 1px solid #f6f6f6;
+      border-bottom: 1px solid #eaeaea;
       i {
         padding-right: 1px;
         font-size: 13px;

@@ -10,8 +10,8 @@
         </div>
         <div class="form_style">
           <form action="">
-            <input type="email" />
-            <button>SEND</button>
+            <input type="email" placeholder="insert your email" />
+            <button type="button" class="btn my_btn">SEND</button>
           </form>
         </div>
       </div>
@@ -197,6 +197,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/style/variables.scss";
 .subscribe_section {
   background-color: #303337;
   padding: 70px 0px;
@@ -228,7 +229,26 @@ export default {
       h4 {
         display: inline-block;
         padding-left: 30px;
+        font-weight: 700;
         color: white;
+      }
+    }
+    .form_style {
+      .my_btn {
+        color: white;
+        background-color: $primary_color;
+        border-radius: 20px;
+        margin: 0px 15px;
+        padding: 6px 16px;
+        font-weight: 700;
+        font-size: 13px;
+      }
+      input {
+        border: none;
+        border-radius: 20px;
+        width: 250px;
+        height: 34px;
+        padding: 0px 10px;
       }
     }
   }
@@ -256,7 +276,7 @@ export default {
         li {
           padding: 10px 0px;
           display: flex;
-          border-bottom: 1px solid #303337;
+          border-bottom: 1px solid #35383c;
           i {
             font-size: 10px;
             line-height: 25px;
@@ -277,7 +297,7 @@ export default {
         flex-wrap: wrap;
         li {
           margin: 1px;
-          border: 1px solid #303337;
+          border: 1px solid #35383c;
           .tag_link {
             padding: 10px;
             text-decoration: none;

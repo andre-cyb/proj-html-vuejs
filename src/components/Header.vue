@@ -34,7 +34,7 @@
                 ></i>
               </li>
             </ul>
-            <button type="button" class="btn btn-primary">SHOP NOW!</button>
+            <button type="button" class="btn">SHOP NOW!</button>
             <span><i class="fa fa-search" aria-hidden="true"></i></span>
           </div>
         </div>
@@ -46,8 +46,8 @@
         <div class="my_cont">
           <h1>Brand New Arrivals</h1>
           <p>NEW COLLECTION FROM NEW YORK</p>
-          <button>VIEW ALL</button>
-          <button>LOOKBOOK</button>
+          <button class="btn btn-outline-light my_light_btn">VIEW ALL</button>
+          <button class="btn btn-outline-light my_light_btn">LOOKBOOK</button>
         </div>
       </div>
     </div>
@@ -94,48 +94,46 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/style/variables.scss";
 .first_nav {
   border-bottom: 1px solid #f6f6f6;
-  .my_cont {
-    max-width: 1140px;
-    margin: auto;
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li {
-        display: inline-block;
-        i {
-          font-size: 16px;
-          padding-right: 20px;
-        }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      i {
+        font-size: 16px;
+        padding-right: 20px;
       }
     }
-    .cart_menu {
-      li {
-        color: #6b6a6b;
-        padding: 15px;
-        font-size: 14px;
-        border-right: 1px solid #f6f6f6;
+  }
+  .cart_menu {
+    li {
+      color: #6b6a6b;
+      padding: 15px;
+      font-size: 14px;
+      border-right: 1px solid #f6f6f6;
 
-        i {
-          padding: 0px 10px;
-          font-size: 10px;
-        }
+      i {
+        padding: 0px 10px;
+        font-size: 10px;
       }
-      .cart {
-        color: black;
-        padding: 15px 60px 15px 60px;
-        border: none;
-        background-color: #fafafa;
-        i {
-          font-size: 14px;
+    }
+    .cart {
+      color: black;
+      padding: 15px 60px 15px 60px;
+      border: none;
+      background-color: #fafafa;
+      i {
+        font-size: 14px;
 
-          padding: 0px 10px;
-        }
-        .fa-chevron-down {
-          font-size: 13px;
-        }
+        padding: 0px 10px;
+      }
+      .fa-chevron-down {
+        font-size: 13px;
       }
     }
   }
@@ -163,6 +161,8 @@ export default {
       }
     }
     button {
+      background-color: $primary_color;
+      color: white;
       border-radius: 20px;
       margin: 0px 15px;
       padding: 6px 16px;
@@ -189,11 +189,18 @@ export default {
         color: white;
       }
       p {
+        font-size: 20px;
         color: white;
       }
 
-      button {
+      .my_light_btn {
         display: inline-block;
+        margin: 0px 10px;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 15px 30px;
+        border-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.123);
       }
     }
   }

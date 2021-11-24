@@ -44,23 +44,23 @@
         <div class="card_content">
           <h3>Winter Collection</h3>
           <small>STYLISH AND WARM</small>
-          <button>VIEW MORE</button>
+          <button class="btn btn-outline-light my_light_btn">VIEW MORE</button>
         </div>
       </div>
       <div class="collection_card">
         <img src="@/assets/spring_collection_bg.jpg" alt="" />
         <div class="card_content">
           <h3>Spring Collection</h3>
-          <small>STYLISH AND WARM</small>
-          <button>VIEW MORE</button>
+          <small>BRIGHT AND COLORFUL</small>
+          <button class="btn btn-outline-light my_light_btn">VIEW MORE</button>
         </div>
       </div>
       <div class="collection_card">
         <img src="@/assets/autumn_collection_bg.jpg" alt="" />
         <div class="card_content">
           <h3>Autumn Collection</h3>
-          <small>STYLISH AND WARM</small>
-          <button>VIEW MORE</button>
+          <small>RICH AND COMFORTABLE</small>
+          <button class="btn btn-outline-light my_light_btn">VIEW MORE</button>
         </div>
       </div>
     </div>
@@ -104,7 +104,9 @@
             <div class="offer_card_content">
               <h1>70% Off</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-              <button>VIEW MORE</button>
+              <button class="btn btn-outline-light my_light_btn">
+                VIEW MORE
+              </button>
             </div>
           </div>
           <div class="offer_card text-white">
@@ -112,7 +114,9 @@
             <div class="offer_card_content">
               <h1>Free Shipping</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-              <button>VIEW MORE</button>
+              <button class="btn btn-outline-light my_light_btn">
+                VIEW MORE
+              </button>
             </div>
           </div>
         </div>
@@ -432,65 +436,64 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/style/variables.scss";
 @import "@/style/global.scss";
-.my-cont {
-  max-width: 1140px; //       !!DA ELIMINARE TUTTI I TAG MY_CONT!!    //
-  margin: auto;
-  .featured_products {
-    padding: 150px 0px;
 
-    .filter_by_gender {
-      list-style: none;
-      padding-left: 0;
-      padding-bottom: 30px;
-      margin: 0;
+.featured_products {
+  padding: 150px 0px;
 
-      li {
-        background-color: #f6f6f6;
-        display: inline-block;
-        padding: 10px 50px;
-        border: 1px solid #f6f6f6;
-      }
-      .active {
-        background-color: white;
-      }
+  .filter_by_gender {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 30px;
+    margin: 0;
+
+    li {
+      background-color: #f6f6f6;
+      display: inline-block;
+      padding: 10px 50px;
+      border: 1px solid #eaeaea;
     }
-    .card_container {
-      display: flex;
-      padding-bottom: 30px;
-      .featured_products_card {
-        width: calc(100% / 4);
-        text-align: start;
-        img {
-          width: 100%;
-        }
-        p {
-          margin-bottom: 0;
-          margin-top: 15px;
-          font-weight: bold;
-        }
-        small {
+    .active {
+      background-color: white;
+    }
+  }
+  .card_container {
+    display: flex;
+    padding-bottom: 30px;
+    .featured_products_card {
+      width: calc(100% / 4);
+      text-align: start;
+      img {
+        width: 100%;
+      }
+      p {
+        margin-bottom: 0;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      small {
+        font-size: 12px;
+        display: block;
+      }
+      .price_cont {
+        padding: 10px 0px;
+        .d-price {
+          padding-right: 10px;
           font-size: 12px;
-          display: block;
+          text-decoration: line-through;
+          font-weight: 600;
+          color: #427ed5;
         }
-        .price_cont {
-          padding: 10px 0px;
-          .d-price {
-            padding-right: 10px;
-            font-size: 12px;
-            text-decoration: line-through;
-            font-weight: 600;
-            color: #427ed5;
-          }
-          .price {
-            font-weight: 600;
-            color: #427ed5;
-          }
+        .price {
+          font-weight: 600;
+          color: #427ed5;
         }
       }
     }
   }
 }
+
 .collection_section {
   display: flex;
   .collection_card {
@@ -517,6 +520,18 @@ export default {
       }
       small {
         display: block;
+        margin: 20px 0px;
+        color: white;
+        font-weight: 500;
+      }
+      .my_light_btn {
+        display: inline-block;
+        margin: 0px 10px;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 10px 25px;
+        border-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.123);
       }
     }
   }
@@ -575,6 +590,15 @@ export default {
         }
         h1 {
           font-weight: bold;
+        }
+        .my_light_btn {
+          display: inline-block;
+          margin: 0px 10px;
+          font-size: 10px;
+          font-weight: 600;
+          padding: 10px 25px;
+          border-radius: 25px;
+          background-color: rgba(255, 255, 255, 0.123);
         }
       }
     }
