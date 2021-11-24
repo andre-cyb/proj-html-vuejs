@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="my-cont">
+    <div class="my_cont">
       <!-- ---------------------------------------------------FEATURED PRODUCT -->
       <section class="featured_products">
         <SectionTitle
@@ -440,7 +440,7 @@ export default {
 @import "@/style/global.scss";
 
 .featured_products {
-  padding: 150px 0px;
+  padding: $big_paddingXsection;
 
   .filter_by_gender {
     list-style: none;
@@ -453,6 +453,10 @@ export default {
       display: inline-block;
       padding: 10px 50px;
       border: 1px solid #eaeaea;
+      transition: background-color 0.2s linear;
+      &:hover {
+        background-color: white;
+      }
     }
     .active {
       background-color: white;
@@ -483,11 +487,11 @@ export default {
           font-size: 12px;
           text-decoration: line-through;
           font-weight: 600;
-          color: #427ed5;
+          color: $primary_color;
         }
         .price {
           font-weight: 600;
-          color: #427ed5;
+          color: $primary_color;
         }
       }
     }
@@ -498,7 +502,6 @@ export default {
   display: flex;
   .collection_card {
     width: calc(100% / 3);
-    //background-image: url("../assets/winter_collection_bg.jpg");
     background-position: top;
     position: relative;
     img {
@@ -532,12 +535,15 @@ export default {
         padding: 10px 25px;
         border-radius: 25px;
         background-color: rgba(255, 255, 255, 0.123);
+        &:hover {
+          color: white;
+        }
       }
     }
   }
 }
 .bs_section {
-  padding: 150px 0px;
+  padding: $big_paddingXsection;
   .container_bs {
     position: relative;
     display: flex;
@@ -599,13 +605,16 @@ export default {
           padding: 10px 25px;
           border-radius: 25px;
           background-color: rgba(255, 255, 255, 0.123);
+          &:hover {
+            color: white;
+          }
         }
       }
     }
   }
 }
 .na_section {
-  padding: 150px 0px;
+  padding: $big_paddingXsection;
   .container_na {
     position: relative;
     display: flex;
@@ -637,7 +646,7 @@ export default {
   }
 }
 .from_blog_section {
-  padding: 70px 0px;
+  padding: $medium_paddingXsection;
   .container_from_blog {
     display: flex;
     gap: 25px;
@@ -661,26 +670,22 @@ export default {
   }
 }
 .preview_items {
-  padding: 70px 0px;
+  padding: $medium_paddingXsection;
   text-align: start;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      padding: 10px 0px;
-      display: flex;
-      .item_details {
-        width: 80%;
-      }
-      .item_image {
-        width: 20%;
-      }
+
+  li {
+    padding: 10px 0px;
+    display: flex;
+    .item_details {
+      width: 80%;
+    }
+    .item_image {
+      width: 20%;
     }
   }
 }
 .logo_section {
-  padding: 70px 0px;
+  padding: $medium_paddingXsection;
   background-color: #e7e7e7;
   p {
     padding-bottom: 10px;

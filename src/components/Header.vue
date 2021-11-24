@@ -95,21 +95,17 @@ export default {
 
 <style lang="scss">
 @import "@/style/variables.scss";
+@import "@/style/global.scss";
 .first_nav {
   border-bottom: 1px solid #f6f6f6;
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      display: inline-block;
-      i {
-        font-size: 16px;
-        padding-right: 20px;
-      }
+  li {
+    display: inline-block;
+    i {
+      font-size: 16px;
+      padding-right: 20px;
     }
   }
+
   .cart_menu {
     li {
       color: #6b6a6b;
@@ -140,38 +136,32 @@ export default {
 }
 .second_nav {
   padding: 10px 0px;
-  .my_cont {
-    max-width: 1140px;
-    margin: auto;
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .cart_menu {
+  .cart_menu {
+    display: inline-block;
+    li {
+      font-size: 15px;
+      padding: 15px;
       display: inline-block;
-      li {
-        font-size: 15px;
-        padding: 15px;
-        display: inline-block;
-        .sub_menu_icon {
-          font-size: 13px;
-          padding: 0px 5px;
-        }
+      .sub_menu_icon {
+        font-size: 13px;
+        padding: 0px 5px;
       }
     }
-    button {
-      background-color: $primary_color;
+  }
+  button {
+    background-color: $primary_color;
+    color: white;
+    border-radius: 20px;
+    margin: 0px 15px;
+    padding: 6px 16px;
+    font-weight: 700;
+    font-size: 13px;
+    &:hover {
       color: white;
-      border-radius: 20px;
-      margin: 0px 15px;
-      padding: 6px 16px;
-      font-weight: 700;
-      font-size: 13px;
     }
-    span {
-      margin-left: 20px;
-    }
+  }
+  span {
+    margin-left: 20px;
   }
 }
 .hero {
@@ -180,27 +170,27 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    .my_cont {
-      max-width: 1140px;
-      margin: auto;
-      h1 {
-        font-size: 80px;
-        font-weight: bold;
-        color: white;
-      }
-      p {
-        font-size: 20px;
-        color: white;
-      }
 
-      .my_light_btn {
-        display: inline-block;
-        margin: 0px 10px;
-        font-size: 15px;
-        font-weight: 600;
-        padding: 15px 30px;
-        border-radius: 25px;
-        background-color: rgba(255, 255, 255, 0.123);
+    h1 {
+      font-size: 80px;
+      font-weight: bold;
+      color: white;
+    }
+    p {
+      font-size: 20px;
+      color: white;
+    }
+
+    .my_light_btn {
+      display: inline-block;
+      margin: 0px 10px;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 15px 30px;
+      border-radius: 25px;
+      background-color: rgba(255, 255, 255, 0.123);
+      &:hover {
+        color: white;
       }
     }
   }

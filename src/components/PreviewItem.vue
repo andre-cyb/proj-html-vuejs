@@ -8,7 +8,6 @@
           <div v-if="product.vote !== 0">
             <i
               class="fa fa-star"
-              style="color: $primary_color"
               aria-hidden="true"
               v-for="(star, i) in product.vote"
               :key="`star` + i"
@@ -63,6 +62,9 @@ export default {
         .item_title {
           margin-bottom: 0;
           font-size: 13px;
+        }
+        i {
+          color: $primary_color;
         }
         .oldPrice {
           font-weight: 700;

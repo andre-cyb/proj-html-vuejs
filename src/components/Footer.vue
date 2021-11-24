@@ -35,7 +35,7 @@
         <div class="col-3 my_recent_post">
           <!-- COLONNA FOOTER RECENT POSTS -->
           <p>RECENT POSTS</p>
-          <ul>
+          <ul class="ps-0">
             <li v-for="(post, i) in recentPosts" :key="`post` + i">
               <i class="fa fa-chevron-right" aria-hidden="true"></i>
               <p class="ps-2">{{ post.post }}</p>
@@ -198,6 +198,7 @@ export default {
 
 <style lang="scss">
 @import "@/style/variables.scss";
+@import "@/style/global.scss";
 .subscribe_section {
   background-color: #303337;
   padding: 70px 0px;
@@ -269,23 +270,19 @@ export default {
     }
     .my_recent_post {
       text-align: start;
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        li {
-          padding: 10px 0px;
-          display: flex;
-          border-bottom: 1px solid #35383c;
-          i {
-            font-size: 10px;
-            line-height: 25px;
-          }
 
-          p {
-            display: inline;
-            margin: 0;
-          }
+      li {
+        padding: 10px 0px;
+        display: flex;
+        border-bottom: 1px solid #35383c;
+        i {
+          font-size: 10px;
+          line-height: 25px;
+        }
+
+        p {
+          display: inline;
+          margin: 0;
         }
       }
     }
@@ -311,9 +308,6 @@ export default {
 .pay_methods_section {
   background-color: #1d1f22;
   ul {
-    list-style: none;
-    margin: 0%;
-    padding: 0;
     padding-top: 20px;
     li {
       color: white;
