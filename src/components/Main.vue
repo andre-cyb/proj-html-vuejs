@@ -20,7 +20,10 @@
             v-for="(product, i) in maleCollection"
             :key="i"
           >
-            <img :src="product.image" alt="" />
+            <div class="position-relative">
+              <img :src="product.image" alt="" />
+              <div class="overlay"></div>
+            </div>
             <p>{{ product.product }}</p>
             <small>{{ product.tags }}</small>
             <div class="price_cont">
@@ -77,7 +80,18 @@
             v-for="(BsCard, i) in bestSeller"
             :key="`BestS` + i"
           >
-            <img :src="BsCard.image" alt="" />
+            <div class="position-relative">
+              <img :src="BsCard.image" alt="" />
+              <div class="bs_overlay d-none">
+                <!-- ---------effetto hover con bug da fixare -->
+                <div>
+                  <h2>{{ BsCard.title }}</h2>
+                  <p>{{ BsCard.tags }}</p>
+                  <span>${{ BsCard.price }}</span>
+                </div>
+                <div></div>
+              </div>
+            </div>
           </div>
           <span class="arrow_style" style="right: 0"
             ><i class="fa fa-chevron-right" aria-hidden="true"></i
@@ -281,18 +295,33 @@ export default {
       bestSeller: [
         {
           image: require("@/assets/spring_printed_dress.jpg"),
+          title: "Spring Printed Dress",
+          tags: "spring, dress",
+          price: 47,
         },
         {
           image: require("@/assets/modern_love_tee.jpg"),
+          title: "Modern Love Tee",
+          tags: "tee, modern",
+          price: 22,
         },
         {
           image: require("@/assets/black_leather_jacket.jpg"),
+          title: "Black Leather Jacket",
+          tags: "Jacket, leather",
+          price: 200,
         },
         {
           image: require("@/assets/black_elegant_leather_jacket.jpg"),
+          title: "Black Elegant Leather Jacket",
+          tags: "Jacket, leather",
+          price: 300,
         },
         {
           image: require("@/assets/hipster_black_top.jpg"),
+          title: "Hipster Black Top",
+          tags: "hipster, top",
+          price: 57,
         },
       ],
       NewArrivals: [
@@ -468,6 +497,22 @@ export default {
     .featured_products_card {
       width: calc(100% / 4);
       text-align: start;
+      transition: 0.2s linear;
+      &:hover {
+        /* .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(
+            0deg,
+            rgba(226, 128, 177, 1) 0%,
+            rgba(41, 241, 243, 0.3746673669467788) 100%
+          );
+          bottom: 0;
+        } */
+      }
+
       img {
         width: 100%;
       }
@@ -537,6 +582,7 @@ export default {
         background-color: rgba(255, 255, 255, 0.123);
         &:hover {
           color: white;
+          background-color: rgba(255, 255, 255, 0.226);
         }
       }
     }
@@ -552,16 +598,29 @@ export default {
       img {
         width: 100%;
       }
+      &:hover {
+        .bs_overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(
+            0deg,
+            rgba(226, 128, 177, 1) 0%,
+            rgba(41, 241, 243, 0.3746673669467788) 100%
+          );
+          bottom: 0;
+        }
+      }
     }
     .arrow_style {
       position: absolute;
-
       top: 50%;
       transform: translateY(-50%);
       color: white;
       background-color: #c1c1c1;
       i {
-        padding: 15px 5px;
+        padding: 20px 8px;
         font-size: 10px;
       }
     }
@@ -607,6 +666,7 @@ export default {
           background-color: rgba(255, 255, 255, 0.123);
           &:hover {
             color: white;
+            background-color: rgba(255, 255, 255, 0.226);
           }
         }
       }
@@ -623,13 +683,12 @@ export default {
     }
     .arrow_style {
       position: absolute;
-
       top: 50%;
       transform: translateY(-50%);
       color: white;
       background-color: #c1c1c1;
       i {
-        padding: 15px 5px;
+        padding: 25px 12px;
         font-size: 10px;
       }
     }

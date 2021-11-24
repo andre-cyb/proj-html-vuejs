@@ -26,7 +26,8 @@
           <div>
             <ul class="cart_menu">
               <li v-for="(menuLink, i) in NavbarHeader" :key="i">
-                {{ menuLink.title }}
+                <a href="#">{{ menuLink.title }}</a>
+
                 <i
                   v-if="!menuLink.subMenu ? `` : `d-none`"
                   class="fa fa-chevron-down sub_menu_icon"
@@ -110,7 +111,7 @@ export default {
     li {
       color: #6b6a6b;
       padding: 15px;
-      font-size: 14px;
+      font-size: 12px;
       border-right: 1px solid #f6f6f6;
 
       i {
@@ -142,6 +143,10 @@ export default {
       font-size: 15px;
       padding: 15px;
       display: inline-block;
+      a {
+        color: black;
+        text-decoration: none;
+      }
       .sub_menu_icon {
         font-size: 13px;
         padding: 0px 5px;
@@ -158,6 +163,7 @@ export default {
     font-size: 13px;
     &:hover {
       color: white;
+      box-shadow: 1px 2px 10px $primary_color;
     }
   }
   span {
@@ -191,6 +197,7 @@ export default {
       background-color: rgba(255, 255, 255, 0.123);
       &:hover {
         color: white;
+        background-color: rgba(255, 255, 255, 0.226);
       }
     }
   }

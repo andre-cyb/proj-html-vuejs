@@ -38,7 +38,9 @@
           <ul class="ps-0">
             <li v-for="(post, i) in recentPosts" :key="`post` + i">
               <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              <p class="ps-2">{{ post.post }}</p>
+              <p class="ps-2">
+                <a href="#">{{ post.post }}</a>
+              </p>
             </li>
           </ul>
         </div>
@@ -243,6 +245,9 @@ export default {
         padding: 6px 16px;
         font-weight: 700;
         font-size: 13px;
+        &:hover {
+          box-shadow: 1px 2px 10px $primary_color;
+        }
       }
       input {
         border: none;
@@ -283,6 +288,10 @@ export default {
         p {
           display: inline;
           margin: 0;
+          a {
+            text-decoration: none;
+            color: white;
+          }
         }
       }
     }

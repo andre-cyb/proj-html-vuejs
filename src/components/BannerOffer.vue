@@ -1,4 +1,6 @@
+
 <template>
+  <!-- COMPONENTE NON UTILIZZATO PER MANCANZA DI TEMPO CAUSA BUG -->
   <div class="offer_card text-white">
     <img :src="image" width="100%" alt="" />
     <div class="offer_card_content">
