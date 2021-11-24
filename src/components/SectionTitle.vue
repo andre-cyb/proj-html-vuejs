@@ -24,12 +24,15 @@ export default {
 
   .title {
     display: inline-block;
-    width: 30%;
+    width: 22%;
+    h3 {
+      font-weight: 700;
+    }
   }
   hr {
     display: inline-block;
     height: 2px;
-    width: 35%;
+    width: 39%;
     background-color: rgb(44, 44, 44);
     vertical-align: center;
   }

@@ -9,7 +9,7 @@
         ></SectionTitle>
         <div>
           <ul class="filter_by_gender">
-            <li>Men</li>
+            <li class="active">Men</li>
             <li>Women</li>
             <li>Accessories</li>
           </ul>
@@ -23,10 +23,15 @@
             <img :src="product.image" alt="" />
             <p>{{ product.product }}</p>
             <small>{{ product.tags }}</small>
-            <span :class="product.oldPrice ? `d-block` : `d-none`">
-              {{ product.oldPrice }}</span
-            >
-            <span>{{ product.price }}</span>
+            <div class="price_cont">
+              <span
+                class="d-price"
+                :class="product.oldPrice ? `d-inline-block` : `d-none`"
+              >
+                {{ product.oldPrice }}</span
+              >
+              <span class="price">{{ product.price }}</span>
+            </div>
           </div>
         </div>
       </section>
@@ -35,25 +40,29 @@
     </div>
     <div class="collection_section">
       <div class="collection_card">
-        <!-- <img src="@/assets/winter_collection_bg.jpg" alt="" /> -->
-        <div class="prova">
+        <img src="@/assets/winter_collection_bg.jpg" alt="" />
+        <div class="card_content">
           <h3>Winter Collection</h3>
           <small>STYLISH AND WARM</small>
           <button>VIEW MORE</button>
         </div>
       </div>
-      <!-- <div class="collection_card">
+      <div class="collection_card">
         <img src="@/assets/spring_collection_bg.jpg" alt="" />
-        <h3>Spring Collection</h3>
-        <small>BRIGHT AND COLORFUL</small>
-        <button>VIEW MORE</button>
+        <div class="card_content">
+          <h3>Spring Collection</h3>
+          <small>STYLISH AND WARM</small>
+          <button>VIEW MORE</button>
+        </div>
       </div>
       <div class="collection_card">
         <img src="@/assets/autumn_collection_bg.jpg" alt="" />
-        <h3>Autumn Collection</h3>
-        <small>RICH AND CONFORTABLE</small>
-        <button>VIEW MORE</button>
-      </div> -->
+        <div class="card_content">
+          <h3>Autumn Collection</h3>
+          <small>STYLISH AND WARM</small>
+          <button>VIEW MORE</button>
+        </div>
+      </div>
     </div>
     <!-- ------------------------------------------------------BEST SELLER SECTION -->
     <div class="bs_section">
@@ -90,19 +99,19 @@
             offer="70% Off"
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           ></BannerOffer> -->
-          <div class="offer_card_1 text-white">
+          <div class="offer_card text-white">
             <img src="@/assets/promo_box_1_bg.jpg" width="100%" alt="" />
             <div class="offer_card_content">
-              <h2>70% Off</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <h1>70% Off</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
               <button>VIEW MORE</button>
             </div>
           </div>
-          <div class="offer_card_1 text-white">
-            <img src="@/assets/promo_box_1_bg.jpg" width="100%" alt="" />
+          <div class="offer_card text-white">
+            <img src="@/assets/promo_box_2_bg.jpg" width="100%" alt="" />
             <div class="offer_card_content">
-              <h2>70% Off</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <h1>Free Shipping</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
               <button>VIEW MORE</button>
             </div>
           </div>
@@ -184,10 +193,13 @@
     <div class="preview_items">
       <div class="my_cont">
         <div class="row">
-          <PreviewItem title="FEATURED"></PreviewItem>
-          <PreviewItem title="FEATURED"></PreviewItem>
-          <PreviewItem title="FEATURED"></PreviewItem>
-          <PreviewItem title="FEATURED"></PreviewItem>
+          <PreviewItem title="FEATURED" :Arr="featured"></PreviewItem>
+          <PreviewItem title="ON SALE" :Arr="onSale"></PreviewItem>
+          <PreviewItem title="TOP RATED" :Arr="topRated"></PreviewItem>
+          <PreviewItem
+            title="LATEST REVIEWS"
+            :Arr="latestReviews"
+          ></PreviewItem>
         </div>
       </div>
     </div>
@@ -310,6 +322,110 @@ export default {
           thumb: require("@/assets/post_img_10-700x441.jpg"),
         },
       ],
+      featured: [
+        {
+          image: require("@/assets/black_leather_jacket.jpg"),
+          title: "Black Jacket",
+          oldPrice: 0,
+          price: 125,
+          vote: 0,
+          brand: "",
+        },
+        {
+          image: require("@/assets/black_elegant_leather_jacket.jpg"),
+          title: "Black Leather Jacket",
+          oldPrice: 235,
+          price: 200,
+          vote: 5,
+          brand: "",
+        },
+        {
+          image: require("@/assets/hipster_black_top.jpg"),
+          title: "Hipster Black Top",
+          oldPrice: 0,
+          price: 57,
+          vote: 0,
+          brand: "",
+        },
+      ],
+      onSale: [
+        {
+          image: require("@/assets/black_elegant_leather_jacket.jpg"),
+          title: "Black Leather Jacket",
+          oldPrice: 235,
+          price: 200,
+          vote: 5,
+          brand: "",
+        },
+        {
+          image: require("@/assets/blue_leather_jacket-400x520.jpg"),
+          title: "Blue Leather Jacket",
+          oldPrice: 80,
+          price: 60,
+          vote: 0,
+          brand: "",
+        },
+        {
+          image: require("@/assets/modern_leather_boots-400x520.jpg"),
+          title: "Modern Leather Boots",
+          oldPrice: 50,
+          price: 30,
+          vote: 0,
+          brand: "",
+        },
+      ],
+      topRated: [
+        {
+          image: require("@/assets/leather_gloves-400x520.jpg"),
+          title: "Leather Gloves",
+          oldPrice: 0,
+          price: 45,
+          vote: 5,
+          brand: "",
+        },
+        {
+          image: require("@/assets/black_elegant_leather_jacket.jpg"),
+          title: "Black Leather Jacket",
+          oldPrice: 235,
+          price: 200,
+          vote: 5,
+          brand: "",
+        },
+        {
+          image: require("@/assets/spring_printed_dress.jpg"),
+          title: "Spring Printed Dress",
+          oldPrice: 0,
+          price: 47,
+          vote: 5,
+          brand: "",
+        },
+      ],
+      latestReviews: [
+        {
+          image: require("@/assets/black_elegant_leather_jacket.jpg"),
+          title: "Black Leather Jacket",
+          oldPrice: 0,
+          price: 0,
+          vote: 5,
+          brand: "Admin",
+        },
+        {
+          image: require("@/assets/leather_gloves-400x520.jpg"),
+          title: "Leather Gloves",
+          oldPrice: 0,
+          price: 0,
+          vote: 5,
+          brand: "Beardman",
+        },
+        {
+          image: require("@/assets/spring_printed_dress.jpg"),
+          title: "Spring Printed Dress",
+          oldPrice: 0,
+          price: 0,
+          vote: 5,
+          brand: "Admin",
+        },
+      ],
     };
   },
 };
@@ -330,9 +446,13 @@ export default {
       margin: 0;
 
       li {
+        background-color: #f6f6f6;
         display: inline-block;
         padding: 10px 50px;
-        border: 1px solid grey;
+        border: 1px solid #f6f6f6;
+      }
+      .active {
+        background-color: white;
       }
     }
     .card_container {
@@ -340,8 +460,32 @@ export default {
       padding-bottom: 30px;
       .featured_products_card {
         width: calc(100% / 4);
+        text-align: start;
         img {
           width: 100%;
+        }
+        p {
+          margin-bottom: 0;
+          margin-top: 15px;
+          font-weight: bold;
+        }
+        small {
+          font-size: 12px;
+          display: block;
+        }
+        .price_cont {
+          padding: 10px 0px;
+          .d-price {
+            padding-right: 10px;
+            font-size: 12px;
+            text-decoration: line-through;
+            font-weight: 600;
+            color: #427ed5;
+          }
+          .price {
+            font-weight: 600;
+            color: #427ed5;
+          }
         }
       }
     }
@@ -351,17 +495,24 @@ export default {
   display: flex;
   .collection_card {
     width: calc(100% / 3);
-    background-image: url("../assets/winter_collection_bg.jpg");
-    aspect-ratio: 1/1;
+    //background-image: url("../assets/winter_collection_bg.jpg");
     background-position: top;
     position: relative;
-    .prova {
+    img {
+      aspect-ratio: 1/1;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .card_content {
+      width: 100%;
       position: absolute;
       bottom: 20%;
       left: 50%;
       transform: translateX(-50%);
       h3 {
-        font-size: 30px;
+        font-size: 40px;
+        font-weight: 700;
         color: white;
       }
       small {
@@ -406,7 +557,7 @@ export default {
     justify-content: space-between;
     height: 300px;
     width: 1140px;
-    .offer_card_1 {
+    .offer_card {
       width: 45%;
       position: relative;
       img {
@@ -418,13 +569,15 @@ export default {
         top: 50%;
         transform: translateY(-50%);
         text-align: start;
-        padding-left: 50px;
+        padding: 0px 50px;
+        p {
+          padding-right: 150px;
+        }
+        h1 {
+          font-weight: bold;
+        }
       }
     }
-    /* .offer_card_2 {
-      width: 45%;
-      background-image: url("../assets/promo_box_2_bg.jpg");
-    } */
   }
 }
 .na_section {
@@ -463,6 +616,7 @@ export default {
   padding: 70px 0px;
   .container_from_blog {
     display: flex;
+    gap: 25px;
     .from_blog_card {
       width: calc(100% / 3);
       text-align: start;
@@ -492,7 +646,6 @@ export default {
     li {
       padding: 10px 0px;
       display: flex;
-      border-bottom: 1px solid rgb(184, 184, 184);
       .item_details {
         width: 80%;
       }
@@ -505,6 +658,10 @@ export default {
 .logo_section {
   padding: 70px 0px;
   background-color: #e7e7e7;
+  p {
+    padding-bottom: 10px;
+    color: #6b6a6b;
+  }
   .logos_container {
     display: flex;
     .logo {

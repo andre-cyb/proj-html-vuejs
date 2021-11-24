@@ -34,7 +34,7 @@
                 ></i>
               </li>
             </ul>
-            <button>SHOP NOW!</button>
+            <button type="button" class="btn btn-primary">SHOP NOW!</button>
             <span><i class="fa fa-search" aria-hidden="true"></i></span>
           </div>
         </div>
@@ -115,6 +115,7 @@ export default {
       li {
         color: #6b6a6b;
         padding: 15px;
+        font-size: 14px;
         border-right: 1px solid #f6f6f6;
 
         i {
@@ -128,11 +129,12 @@ export default {
         border: none;
         background-color: #fafafa;
         i {
-          font-size: 18px;
+          font-size: 14px;
+
           padding: 0px 10px;
         }
         .fa-chevron-down {
-          font-size: 15px;
+          font-size: 13px;
         }
       }
     }
@@ -151,6 +153,7 @@ export default {
     .cart_menu {
       display: inline-block;
       li {
+        font-size: 15px;
         padding: 15px;
         display: inline-block;
         .sub_menu_icon {
@@ -158,6 +161,16 @@ export default {
           padding: 0px 5px;
         }
       }
+    }
+    button {
+      border-radius: 20px;
+      margin: 0px 15px;
+      padding: 6px 16px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    span {
+      margin-left: 20px;
     }
   }
 }

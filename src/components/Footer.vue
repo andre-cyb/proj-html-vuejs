@@ -2,8 +2,10 @@
   <footer>
     <div class="subscribe_section">
       <div class="form_cont">
-        <div class="text_style">
+        <div class="icon_style">
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </div>
+        <div class="text_style">
           <h4>Subscribe now and get special offers</h4>
         </div>
         <div class="form_style">
@@ -23,12 +25,12 @@
             12345 North Main Sreet,<br />
             New York, NY 555555<br />
             Phone: 1.800.5555.6789<br />
-            Email:info@company.com<br />
+            Email: info@company.com<br />
             Web: Theme-fusion.com<br />
           </p>
           <SocialIcon></SocialIcon>
         </div>
-        <PreviewItem title="TOP RATED PRODUCTS"></PreviewItem>
+        <PreviewItem title="TOP RATED PRODUCTS" :Arr="topRated"></PreviewItem>
         <!-- COLONNA FOOTER TOP PRODUCTS -->
         <div class="col-3 my_recent_post">
           <!-- COLONNA FOOTER RECENT POSTS -->
@@ -75,6 +77,32 @@ export default {
   props: {},
   data() {
     return {
+      topRated: [
+        {
+          image: require("@/assets/leather_gloves-400x520.jpg"),
+          title: "Leather Gloves",
+          oldPrice: 0,
+          price: 45,
+          vote: 5,
+          brand: "",
+        },
+        {
+          image: require("@/assets/black_elegant_leather_jacket.jpg"),
+          title: "Black Leather Jacket",
+          oldPrice: 235,
+          price: 200,
+          vote: 5,
+          brand: "",
+        },
+        {
+          image: require("@/assets/spring_printed_dress.jpg"),
+          title: "Spring Printed Dress",
+          oldPrice: 0,
+          price: 47,
+          vote: 5,
+          brand: "",
+        },
+      ],
       recentPosts: [
         {
           post: "at aptent vehicula blandit  ",
@@ -178,12 +206,25 @@ export default {
     width: 1140px;
     margin: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    .text_style {
+    .icon_style {
+      background-color: #2b2e32;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      position: relative;
       i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
         font-size: 30px;
         color: #6b6a6b;
       }
+    }
+    .text_style {
+      margin-right: auto;
       h4 {
         display: inline-block;
         padding-left: 30px;
