@@ -70,6 +70,12 @@
           >
             <img :src="BsCard.image" alt="" />
           </div>
+          <span class="arrow_style" style="right: 0"
+            ><i class="fa fa-chevron-right" aria-hidden="true"></i
+          ></span>
+          <span class="arrow_style" style="left: 0"
+            ><i class="fa fa-chevron-left" aria-hidden="true"></i
+          ></span>
         </div>
       </div>
     </div>
@@ -79,6 +85,11 @@
     <div class="banner_offer">
       <div class="my_cont">
         <div class="offer_cont">
+          <!--  <BannerOffer
+            image="@/assets/promo_box_1_bg.jpg"
+            offer="70% Off"
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          ></BannerOffer> -->
           <div class="offer_card_1 text-white">
             <img src="@/assets/promo_box_1_bg.jpg" width="100%" alt="" />
             <div class="offer_card_content">
@@ -115,6 +126,12 @@
         >
           <img :src="NaCard.image" width="100%" alt="" />
         </div>
+        <span class="arrow_style" style="right: 0"
+          ><i class="fa fa-chevron-right" aria-hidden="true"></i
+        ></span>
+        <span class="arrow_style" style="left: 0"
+          ><i class="fa fa-chevron-left" aria-hidden="true"></i
+        ></span>
       </div>
     </div>
     <!-- -------------------------------------------------------------------------- -->
@@ -139,6 +156,7 @@
     <div class="from_blog_section">
       <div class="my_cont">
         <SectionTitle
+          class="pt-3 pb-3"
           title="From Our Blog"
           subtitle="Must have products from our top sellers"
         ></SectionTitle>
@@ -201,10 +219,11 @@
 </template>
 
 <script>
+//import BannerOffer from "./BannerOffer.vue";
 import PreviewItem from "./PreviewItem.vue";
 import SectionTitle from "./SectionTitle.vue";
 export default {
-  components: { SectionTitle, PreviewItem },
+  components: { SectionTitle, PreviewItem /* BannerOffer */ },
   name: "Header",
   props: {},
   data() {
@@ -302,7 +321,7 @@ export default {
   max-width: 1140px; //       !!DA ELIMINARE TUTTI I TAG MY_CONT!!    //
   margin: auto;
   .featured_products {
-    padding: 70px 0px;
+    padding: 150px 0px;
 
     .filter_by_gender {
       list-style: none;
@@ -352,13 +371,26 @@ export default {
   }
 }
 .bs_section {
-  padding: 70px 0px;
+  padding: 150px 0px;
   .container_bs {
+    position: relative;
     display: flex;
     .bs_card {
       width: calc(100% / 5);
       img {
         width: 100%;
+      }
+    }
+    .arrow_style {
+      position: absolute;
+
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      background-color: #c1c1c1;
+      i {
+        padding: 15px 5px;
+        font-size: 10px;
       }
     }
   }
@@ -389,18 +421,31 @@ export default {
         padding-left: 50px;
       }
     }
-    .offer_card_2 {
+    /* .offer_card_2 {
       width: 45%;
       background-image: url("../assets/promo_box_2_bg.jpg");
-    }
+    } */
   }
 }
 .na_section {
-  padding: 70px 0px;
+  padding: 150px 0px;
   .container_na {
+    position: relative;
     display: flex;
     .na_card {
       width: calc(100% / 5);
+    }
+    .arrow_style {
+      position: absolute;
+
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      background-color: #c1c1c1;
+      i {
+        padding: 15px 5px;
+        font-size: 10px;
+      }
     }
   }
 }
